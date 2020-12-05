@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Anti-Vaxxers</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section id="q">
+                <article>
+                    <h1>Do</h1>
+                    <h1>Vaccines</h1>
+                    <h1>Cause</h1>
+                    <h1>Autism?</h1>
+                </article>
+            </section>
+            <section id="a">
+                <h1>NO</h1>
+            </section>
+            <section id="r">
+                <img id="title_img" src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P2d_714x348.jpg.img.jpg"/>
+                <article id="content">
+                    <h1>Article title goes here...</h1>
+                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat massa sed ex dignissim ullamcorper. Quisque id odio vel nulla tempor laoreet a sit amet leo. Aenean dictum vestibulum magna, vel finibus nisi congue nec. Donec laoreet volutpat justo, ut volutpat ligula viverra vitae. Nullam quis pulvinar odio, eget dignissim nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed sapien eu urna scelerisque pretium. Etiam ultrices elit vel neque pretium vehicula. Mauris maximus viverra ligula nec porttitor.</b><br><br>Morbi ac malesuada eros. Duis turpis ante, bibendum vel enim sit amet, mattis gravida tellus. Suspendisse feugiat ullamcorper metus, mattis imperdiet purus lobortis at. Donec interdum magna in lacinia sagittis. Nam diam tortor, egestas non arcu id, dapibus elementum est. Aenean blandit ligula laoreet arcu eleifend viverra. Aenean vel neque egestas, pretium leo ac, efficitur massa. Aliquam augue elit, congue ut mattis quis, dapibus quis neque. Sed lobortis ex ut ligula semper, quis rhoncus nunc mattis. In cursus gravida nibh eu commodo. Nunc ac ligula maximus, fringilla turpis in, tincidunt eros. Integer tristique mauris faucibus velit accumsan mattis.</p>
+                    <img src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2016/06/KD-2016-DPS-Landscape-Tips-3.jpg?fit=750%2C500&ssl=1"/>
+                    <h2>Sub title here...</h2>
+                    <p>Pellentesque non egestas diam. Fusce eu nisi at magna efficitur tincidunt. Pellentesque vulputate egestas leo. Aenean a eleifend est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante dolor, placerat sed viverra placerat, malesuada non tortor. Morbi aliquam hendrerit nulla euismod pulvinar. Pellentesque commodo nulla diam. Sed id magna non nisi luctus mattis a lacinia neque. Nunc mollis suscipit lacus, consectetur consectetur tortor ultrices sit amet.<br>Etiam condimentum quis tortor a fringilla. Donec dapibus nisl et risus ullamcorper, quis luctus ex venenatis. Morbi suscipit diam quis tellus malesuada condimentum. Curabitur et nibh elit. Donec ac sem lacus. Sed porttitor fringilla sapien et vulputate. Suspendisse aliquet fringilla rhoncus. Ut sit amet mauris in nibh egestas pellentesque in id mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nulla tortor, dapibus tempor molestie quis, sagittis in neque. Phasellus ut odio at diam dignissim tempor. Mauris maximus vehicula urna vitae faucibus.</p>
+                </article>
+            </section>
+            <section id="c">
+                <p>Citations go here...</p>
+            </section>
+            
+            <div id="progressBar">
+                <div onclick="state = 0;"></div>
+                <div onclick="state = 1;"></div>
+                <div onclick="state = 2;"></div>
+                <div onclick="state = 3;"></div>
+            </div>
+        </main>
+        <script>
+            let slides = [
+                document.getElementById("q"),
+                document.getElementById("a"),
+                document.getElementById("r"),
+                document.getElementById("c")
+            ]
+            let pb = document.getElementById("progressBar")
+            
+            let state = 0;
+            let maxState = 3;
+            
+            document.onclick = () => {update()}
+            
+            document.onkeydown = (e) => {
+                if(e.keyCode == 37){
+                    state--
+                    update()
+                }
+                if(e.keyCode == 39){
+                    state++
+                    update()
+                }
+            }
+            
+            function update(){
+                if(state > maxState){
+                    state = 0;
+                }else if(state < 0){
+                    state = maxState;
+                }
+                
+                for(i=0;i<maxState+1;i++){
+                    pb.children[i].className = ""
+                    slides[i].style.display = "none"
+                }
+                
+                pb.children[state].className = "filled"
+                slides[state].style.display = "block"
+            }
+            
+            update()
+            
+        </script>
+    </body>
+</html>
