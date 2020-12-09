@@ -11,7 +11,6 @@ section{
 
 
 #q h1, #a h1{
-    font-family: 'Special Elite', cursive;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -19,7 +18,7 @@ section{
 }
 
 #q h1{
-    font-size: 18vh;
+    font-size: 16vh;
 }
 
 #q article h1:nth-child(1){
@@ -29,16 +28,24 @@ section{
 
 #q article h1:nth-child(2){
     top:30vh;
-    right: 20vw;
+    left: 10vw;
 }
 #q article h1:nth-child(3){
-    top:50vh;
-    left: 15vw;
+    top:48vh;
+    left: 17vw;
 }
 
 #q article h1:nth-child(4){
-    bottom:10vh;
-    right: 5vw;
+    bottom:13vh;
+    left: 7vw;
+}
+
+#q .poster{
+    height: 80vh;
+    position: absolute;
+    left: 73vw;
+    top:50vh;
+    transform: translate(-50%, -50%);
 }
 
 #a h1{
@@ -76,9 +83,9 @@ section{
     background: white !important;
 }
 
-
-#r, #h, #c{
+#r, #h, #c, #a, #q{
     height: auto;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 #title_img{
@@ -94,7 +101,6 @@ section{
     width:60%;
     display: block;
     margin: auto;
-    font-family: 'Playfair Display', sans-serif;
 }
 
 #content h1{
@@ -140,7 +146,6 @@ section{
     display: block;
     margin:5% auto;
     height: 90vh;
-    font-family: 'Playfair Display', sans-serif;
     box-shadow: 0px 0px 20px #e6e8e9;
 }
 
@@ -159,6 +164,7 @@ color: #2369af;
     background: #2369af;
     border: none;
     border-bottom: 3px solid #123e6a;
+    font-family: inherit;
     color: white;
     font-size: .85em;
     border-radius: 5px;
