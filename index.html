@@ -3,7 +3,7 @@
         <title>Anti-Vaxxers</title>
         <link rel="stylesheet" href="styles.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Playfair+Display&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
@@ -12,11 +12,12 @@
                     <h1>Do</h1>
                     <h1>Vaccines</h1>
                     <h1>Cause</h1>
-                    <h1>Autism?</h1>
+                    <h1>Autism</h1>
+                    <img class="poster" src="https://yaleglobalhealthreview.files.wordpress.com/2016/01/sheridan-raed-mansour.jpg">
                 </article>
             </section>
             <section id="a">
-                <h1>NO</h1>
+                <h1>No</h1>
             </section>
             <section id="r">
                 <img id="title_img" src="https://images.newscientist.com/wp-content/uploads/2020/03/17165159/f0265463-syringe_being_filled-spl_web.jpg"/>
@@ -70,7 +71,8 @@
             </div>
         </main>
         <script>
-            var a=[document.getElementById("q"),document.getElementById("a"),document.getElementById("r"),document.getElementById("h"),document.getElementById("c")],b=document.getElementById("progressBar"),c=0;function d(){c>a.length-1?c=0:0>c&&(c=a.length-1);for(i=0;i<a.length;i++)b.children[i].className="",a[i].style.display="none";b.children[c].className="filled";a[c].style.display="block";window.scrollTo(0,0)}document.onkeydown=function(e){37==e.keyCode&&(c--,d());39==e.keyCode&&(c++,d())};d();
+            var a="",b=[document.getElementById("q"),document.getElementById("a"),document.getElementById("r"),document.getElementById("h"),document.getElementById("c")],c=document.getElementById("progressBar"),d=0;function f(){d>b.length-1?d=0:0>d&&(d=b.length-1);for(i=0;i<b.length;i++)c.children[i].className="",b[i].style.display="none";c.children[d].className="filled";b[d].style.display="block";window.scrollTo(0,0)}
+document.onkeydown=function(e){37==e.keyCode&&(d--,f());39==e.keyCode&&(d++,f());a+=e.key;if(0<=a.indexOf("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"))for(a="",i=0;i<b.length;i++)b[i].style.fontFamily=""==b[i].style.fontFamily?"Wingdings3":""};f();
         </script>
     </body>
 </html>
