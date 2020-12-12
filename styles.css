@@ -17,7 +17,7 @@ section{
     color: #1a1c1a;
 }
 
-#q h1{
+#q h1, #a h1{
     font-size: 16vh;
 }
 
@@ -32,7 +32,7 @@ section{
 }
 #q article h1:nth-child(3){
     top:48vh;
-    left: 17vw;
+    left: 30vw;
 }
 
 #q article h1:nth-child(4){
@@ -40,19 +40,36 @@ section{
     left: 7vw;
 }
 
-#q .poster{
-    height: 80vh;
-    position: absolute;
-    left: 73vw;
-    top:50vh;
-    transform: translate(-50%, -50%);
+#a article h1:nth-child(1){
+    top:25vh;
+    right: 10vw;
 }
 
-#a h1{
-    font-size: 50vh;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%)
+#a article h1:nth-child(2){
+    top:40vh;
+    right: 15vw;
+}
+
+.poster{
+    height: 90vh;
+    top:49vh;
+    position: absolute;
+    transition: .5s;
+}
+
+.poster:hover{
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.left{
+    position: absolute;
+    left: 25vw;
+    transform: translate(-50%, -50%); 
+}
+
+.right{
+    left: 75vw;
+    transform: translate(-50%, -50%);
 }
 
 
