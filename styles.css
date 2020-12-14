@@ -19,40 +19,32 @@ section{
     font-weight: 400;
 }
 
-#q article h1:nth-child(1){
-    top:10vh;
-    left: 5vw;
-}
-
-#q article h1:nth-child(2){
-    top:30vh;
-    left: 10vw;
-}
-#q article h1:nth-child(3){
+#q article h1{
     top:48vh;
-    left: 30vw;
-}
-
-#q article h1:nth-child(4){
-    bottom:13vh;
     left: 7vw;
+    width:50vw;
+    font-size: 12vh;
+    transform: translateY(-50%);
 }
 
-#a article h1:nth-child(1){
-    top:25vh;
-    right: 10vw;
-}
-
-#a article h1:nth-child(2){
-    top:40vh;
-    right: 15vw;
+#a article h1{
+    top:48vh;
+    right: 2vw;
+    width:50vw;
+    font-size: 9vh;
+    transform: translateY(-50%);
 }
 
 .poster{
-    height: 90vh;
+    max-width: 40vw;
     top:49vh;
     position: absolute;
     transition: .5s;
+}
+
+#p3{
+    height:90vh;
+    width: auto;
 }
 
 .poster:hover{
@@ -61,12 +53,12 @@ section{
 
 .left{
     position: absolute;
-    left: 25vw;
+    left: 23vw;
     transform: translate(-50%, -50%); 
 }
 
 .right{
-    left: 75vw;
+    left: 77vw;
     transform: translate(-50%, -50%);
 }
 
